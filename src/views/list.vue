@@ -574,8 +574,7 @@ import axios from 'axios';
   const getFile = (id:string) => {
     return http.get('https://api-drive.mypikpak.com/drive/v1/files/' + id, {
       params: {
-        _magic: '2021',
-        thumbnail_size: 'SIZE_LARGE'
+        usage: 'FETCH'
       }
     })
       .then(res => {
