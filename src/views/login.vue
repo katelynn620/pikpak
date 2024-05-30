@@ -63,7 +63,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { BrandGoogle, Phone } from '@vicons/tabler'
 const loginData = ref({
   username: '',
-  password: ''
+  password: '',
 })
 const route  = useRoute()
 const loading = ref(false)
@@ -74,10 +74,10 @@ const loginPost = () => {
     return false
   }
   loading.value = true
-  http.post('https://user.mypikpak.com/v1/auth/signin', {
-    "captcha_token": "",
+  http.post('https://user.mypikpak.com/v1/auth/token', {
     "client_id": "YNxT9w7GMdWvEOKa",
-    "client_secret": "dbw2OtmVEeuUvIptb1Coyg",
+    "client_secret": "dbw2OtmVEeuUvIptb1Coygx",
+    "grant_type": "password",
     ...loginData.value
   })
     .then((res:any) => {
