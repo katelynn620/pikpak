@@ -59,7 +59,7 @@
         <n-input type="textarea" v-model:value="proxyData" rows="4" placeholder="支持多个随机，一行一个，为空则不代理"></n-input>
         <p></p>
         <n-button type="primary" @click="proxyPost">保存设置</n-button>
-        <n-text @click="proxyReset">恢复默认</n-text>
+        <a href="javascript:void(0)" @click="proxyReset">恢复默认</a>
       </n-collapse-item>
       <n-collapse-item title="关于" name="2">
         <n-space>

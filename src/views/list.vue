@@ -1090,18 +1090,8 @@ import axios from 'axios';
         disabled: row.kind !== 'drive#folder'
       },
       {
-        label: '分享到资源库',
-        key: 'share',
-        disabled: !row.hash
-      },
-      {
         label: '删除',
         key: 'delete'
-      },
-      {
-        label: '直接分享',
-        key: 'sharePikPak',
-        disabled: row.kind === 'drive#folder'
       },
     ]
     if(row.kind !== 'drive#folder') {
